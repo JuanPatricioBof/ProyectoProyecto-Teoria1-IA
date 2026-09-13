@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artesanías - Catálogo de tejidos, cerámicas y pinturas artesanales">
+    <title>Artesanías del Sur</title>
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+         ========================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#inicio">Artesanías del Sur</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#mantenimiento">Mantenimiento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="inicio">
+
+        <!-- =========================
+             PRESENTACIÓN
+             ========================= -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="subtitulo">Hecho a mano · Hecho con pasión</p>
+
+                <h1>Artesanías del Sur</h1>
+
+                <p>
+                    Piezas únicas elaboradas artesanalmente, inspiradas
+                    en los colores, paisajes y tradiciones de nuestra tierra.
+                </p>
+
+                <a class="boton-principal" href="#catalogo">
+                    Ver catálogo
+                </a>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             CATÁLOGO
+             ========================= -->
+        <section id="catalogo" class="catalogo">
+
+            <div class="section-title">
+                <p class="subtitulo">Nuestras creaciones</p>
+                <h2>Catálogo</h2>
+                <p>
+                    Seleccioná una categoría para conocer nuestras piezas.
+                </p>
+            </div>
+
+
+            <!--
+                RADIO BUTTONS
+
+                Los radio buttons permiten cambiar de categoría
+                utilizando solamente CSS, sin JavaScript.
+            -->
+            <input type="radio" name="categoria" id="tejidos" checked>
+            <input type="radio" name="categoria" id="ceramicas">
+            <input type="radio" name="categoria" id="pinturas">
+
+
+            <!-- Botones visuales de las categorías -->
+            <div class="categorias">
+
+                <label for="tejidos" class="categoria-boton">
+                    Tejidos
+                </label>
+
+                <label for="ceramicas" class="categoria-boton">
+                    Cerámicas
+                </label>
+
+                <label for="pinturas" class="categoria-boton">
+                    Pinturas
+                </label>
+
+            </div>
+
+
+            <!-- =========================
+                 SECCIÓN TEJIDOS
+                 ========================= -->
+            <div id="seccion-tejidos" class="productos">
+
+                <h3>Tejidos artesanales</h3>
+
+                <div class="cards">
+
+                    <!-- ARTÍCULO 1 - TEJIDOS -->
+                    <article class="card card-tejidos">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/tejidos/articulo1.png
+                        -->
+                        <img
+                            src="articulos/tejidos/articulo1.png"
+                            alt="Manta artesanal de lana"
+                        >
+
+                        <div class="card-content">
+                            <h4>Manta Tierra Andina</h4>
+
+                            <p>
+                                Manta tejida a mano con lana natural,
+                                inspirada en los colores de las sierras.
+                            </p>
+
+                            <p class="precio">$45.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/tejidos/articulo1.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 2 - TEJIDOS -->
+                    <article class="card card-tejidos">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/tejidos/articulo2.png
+                        -->
+                        <img
+                            src="articulos/tejidos/articulo2.png"
+                            alt="Bufanda tejida artesanal"
+                        >
+
+                        <div class="card-content">
+                            <h4>Bufanda Otoño</h4>
+
+                            <p>
+                                Bufanda artesanal tejida con fibras suaves
+                                y una combinación de tonos tierra.
+                            </p>
+
+                            <p class="precio">$22.500</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/tejidos/articulo2.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 3 - TEJIDOS -->
+                    <article class="card card-tejidos">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/tejidos/articulo3.png
+                        -->
+                        <img
+                            src="articulos/tejidos/articulo3.png"
+                            alt="Almohadón tejido artesanal"
+                        >
+
+                        <div class="card-content">
+                            <h4>Almohadón Raíces</h4>
+
+                            <p>
+                                Almohadón decorativo tejido a mano con
+                                diseños geométricos tradicionales.
+                            </p>
+
+                            <p class="precio">$18.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/tejidos/articulo3.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+
+
+            <!-- =========================
+                 SECCIÓN CERÁMICAS
+                 ========================= -->
+            <div id="seccion-ceramicas" class="productos">
+
+                <h3>Cerámicas artesanales</h3>
+
+                <div class="cards">
+
+                    <!-- ARTÍCULO 1 - CERÁMICAS -->
+                    <article class="card card-ceramicas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/cerámicas/articulo1.png
+                        -->
+                        <img
+                            src="articulos/cerimicas/articulo1.png"
+                            alt="Taza de cerámica artesanal"
+                        >
+
+                        <div class="card-content">
+                            <h4>Taza Tierra</h4>
+
+                            <p>
+                                Taza de cerámica modelada y esmaltada
+                                artesanalmente con acabado rústico.
+                            </p>
+
+                            <p class="precio">$14.500</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/ceramicas/articulo1.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 2 - CERÁMICAS -->
+                    <article class="card card-ceramicas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/cerámicas/articulo2.png
+                        -->
+                        <img
+                            src="articulos/ceramicas/articulo2.png"
+                            alt="Jarrón de cerámica artesanal"
+                        >
+
+                        <div class="card-content">
+                            <h4>Jarrón Cálido</h4>
+
+                            <p>
+                                Jarrón decorativo de cerámica con textura
+                                natural y tonos marrón y beige.
+                            </p>
+
+                            <p class="precio">$32.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/ceramicas/articulo2.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 3 - CERÁMICAS -->
+                    <article class="card card-ceramicas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/cerámicas/articulo3.png
+                        -->
+                        <img
+                            src="articulos/ceramicas/articulo3.png"
+                            alt="Cuenco de cerámica artesanal"
+                        >
+
+                        <div class="card-content">
+                            <h4>Cuenco Barro</h4>
+
+                            <p>
+                                Cuenco artesanal de pequeñas dimensiones,
+                                ideal para servir o decorar.
+                            </p>
+
+                            <p class="precio">$16.500</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/ceramicas/articulo3.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+
+
+            <!-- =========================
+                 SECCIÓN PINTURAS
+                 ========================= -->
+            <div id="seccion-pinturas" class="productos">
+
+                <h3>Pinturas artesanales</h3>
+
+                <div class="cards">
+
+                    <!-- ARTÍCULO 1 - PINTURAS -->
+                    <article class="card card-pinturas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/pinturas/articulo1.png
+                        -->
+                        <img
+                            src="articulos/pinturas/articulo1.png"
+                            alt="Pintura de paisaje serrano"
+                        >
+
+                        <div class="card-content">
+                            <h4>Atardecer Serrano</h4>
+
+                            <p>
+                                Pintura original inspirada en un atardecer
+                                sobre las sierras.
+                            </p>
+
+                            <p class="precio">$58.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/pinturas/articulo1.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 2 - PINTURAS -->
+                    <article class="card card-pinturas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/pinturas/articulo2.png
+                        -->
+                        <img
+                            src="articulos/pinturas/articulo2.png"
+                            alt="Pintura artesanal de paisaje"
+                        >
+
+                        <div class="card-content">
+                            <h4>Camino de Tierra</h4>
+
+                            <p>
+                                Obra realizada con una paleta cálida,
+                                inspirada en los caminos rurales.
+                            </p>
+
+                            <p class="precio">$52.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="articulos/pinturas/articulo2.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 3 - PINTURAS -->
+                    <article class="card card-pinturas">
+
+                        <!--
+                            IMAGEN:
+                            Colocar aquí el archivo:
+                            artículos/pinturas/articulo3.png
+                        -->
+                        <img
+                            src="articulos/pinturas/articulo3.png"
+                            alt="Pintura artesanal de flores"
+                        >
+
+                        <div class="card-content">
+                            <h4>Flores del Campo</h4>
+
+                            <p>
+                                Pintura decorativa inspirada en flores
+                                silvestres y paisajes de nuestra región.
+                            </p>
+
+                            <p class="precio">$47.000</p>
+
+                            <a
+                                class="boton-info"
+                                href="artículos/pinturas/articulo3.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver PDF
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACTO
+             ========================= -->
+        <section id="contacto" class="contacto">
+
+            <div class="section-title">
+                <p class="subtitulo">Estamos para ayudarte</p>
+                <h2>Contacto</h2>
+            </div>
+
+            <form class="formulario">
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="6"
+                        placeholder="Escribí tu mensaje..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMACIÓN DEL MANTENIMIENTO
+             ========================= -->
+        <section id="mantenimiento" class="mantenimiento">
+
+            <div class="section-title">
+                <p class="subtitulo">Información del sitio</p>
+                <h2>Mantenimiento</h2>
+            </div>
+
+            <div class="mantenimiento-contenido">
+                <p>
+                    Este sitio web es mantenido por
+                    <strong>Juan Patricio Bof</strong>.
+                </p>
+
+                <p>
+                    El catálogo presenta productos artesanales de
+                    diferentes categorías y sus correspondientes
+                    documentos informativos.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+         ========================= -->
+    <footer>
+        <p>
+            &copy; 2026 Artesanías del Sur · Sitio mantenido por
+            Juan Patricio Bof
+        </p>
+    </footer>
+
+</body>
+</html>

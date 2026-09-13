@@ -1,0 +1,601 @@
+/* =========================================================
+   ESTILOS GENERALES
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5eee3;
+    color: #4a3428;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+   ========================================================= */
+
+header {
+    background-color: #4a3024;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo a {
+    color: #f8e9d2;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #f8e9d2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d7a86e;
+}
+
+
+/* =========================================================
+   SECCIÓN PRINCIPAL / HERO
+   ========================================================= */
+
+.hero {
+    min-height: 500px;
+    padding: 80px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #d9b892;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitulo {
+    color: #8a5a3b;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    color: #4a3024;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    margin-bottom: 20px;
+}
+
+.hero p:not(.subtitulo) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.boton-principal,
+.boton-info,
+.boton-enviar {
+    display: inline-block;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.boton-principal {
+    padding: 13px 28px;
+    background-color: #6d4632;
+    color: #fff8ed;
+}
+
+.boton-principal:hover {
+    background-color: #503225;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: #4a3024;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+
+/*
+   Los radio buttons son funcionales, pero se ocultan
+   visualmente porque utilizamos sus <label> como botones.
+*/
+
+.catalogo > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTONES DE CATEGORÍAS
+   ========================================================= */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.categoria-boton {
+    padding: 12px 28px;
+
+    background-color: #e8d5bd;
+    border: 2px solid #a97850;
+    border-radius: 25px;
+
+    color: #5b3b2b;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.categoria-boton:hover {
+    transform: translateY(-2px);
+}
+
+
+/*
+   Cuando un radio está seleccionado, su label
+   correspondiente cambia de apariencia.
+*/
+
+#tejidos:checked ~ .categorias label[for="tejidos"],
+#ceramicas:checked ~ .categorias label[for="ceramicas"],
+#pinturas:checked ~ .categorias label[for="pinturas"] {
+    background-color: #6d4632;
+    color: #fff8ed;
+}
+
+
+/* =========================================================
+   OCULTAR / MOSTRAR CATEGORÍAS
+   ========================================================= */
+
+/*
+   Por defecto todas las categorías están ocultas.
+*/
+
+.productos {
+    display: none;
+}
+
+
+/*
+   Como "tejidos" está marcado por defecto,
+   se muestra inicialmente esa categoría.
+*/
+
+#tejidos:checked ~ #seccion-tejidos {
+    display: block;
+}
+
+#ceramicas:checked ~ #seccion-ceramicas {
+    display: block;
+}
+
+#pinturas:checked ~ #seccion-pinturas {
+    display: block;
+}
+
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+
+.productos h3 {
+    text-align: center;
+
+    color: #6d4632;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.card {
+    overflow: hidden;
+
+    border: 2px solid;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(74, 48, 36, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(74, 48, 36, 0.2);
+}
+
+
+/*
+   Cada categoría tiene un fondo diferente,
+   manteniendo la paleta cálida y artesanal.
+*/
+
+.card-tejidos {
+    background-color: #eee0c9;
+    border-color: #a97850;
+}
+
+.card-ceramicas {
+    background-color: #e7c7ae;
+    border-color: #9b6040;
+}
+
+.card-pinturas {
+    background-color: #e2d0b5;
+    border-color: #856044;
+}
+
+
+/* =========================================================
+   IMÁGENES DE LAS TARJETAS
+   ========================================================= */
+
+.card img {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    background-color: #d6c0a6;
+}
+
+
+/* =========================================================
+   CONTENIDO DE LAS TARJETAS
+   ========================================================= */
+
+.card-content {
+    padding: 22px;
+}
+
+.card h4 {
+    color: #4a3024;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.precio {
+    color: #75472f;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BOTÓN INFO / PDF
+   ========================================================= */
+
+.boton-info {
+    padding: 9px 18px;
+
+    background-color: #6d4632;
+    color: #fff8ed;
+}
+
+.boton-info:hover {
+    background-color: #503225;
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contacto {
+    background-color: #eadbc6;
+    padding: 80px 30px;
+}
+
+.formulario {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: #4a3024;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #b68b68;
+    border-radius: 8px;
+
+    background-color: #fffaf2;
+    color: #4a3428;
+
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #6d4632;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.boton-enviar {
+    align-self: flex-start;
+
+    padding: 13px 28px;
+
+    background-color: #6d4632;
+    color: #fff8ed;
+    font-size: 1rem;
+}
+
+.boton-enviar:hover {
+    background-color: #503225;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MANTENIMIENTO
+   ========================================================= */
+
+.mantenimiento {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.mantenimiento-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: #e8d5bd;
+    border: 2px solid #b68b68;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.mantenimiento-contenido p {
+    margin-bottom: 10px;
+}
+
+.mantenimiento-contenido p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    padding: 25px 30px;
+
+    background-color: #4a3024;
+    color: #f8e9d2;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 18px 20px;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero p:not(.subtitulo) {
+        font-size: 1rem;
+    }
+
+    .catalogo,
+    .contacto,
+    .mantenimiento {
+        padding: 60px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .categorias {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .categoria-boton {
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    .boton-enviar {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
