@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanías del Sur - Catálogo y Contacto</title>
+    <!-- Enlace al archivo de estilos externo obligatorio -->
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <h1 class="logo">Artesanías & Tradición</h1>
+            <nav class="navbar">
+                <a href="#catalogo">Catálogo</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#mantenimiento">Sobre el sitio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+
+        <!-- Sección de Catálogo con Filtro por Radio Buttons (Pura CSS) -->
+        <section id="catalogo" class="catalogo-section">
+            <h2>Nuestro Catálogo</h2>
+            <p class="section-subtitle">Explora nuestras piezas únicas hechas a mano agrupadas por categoría.</p>
+
+            <!-- Radio buttons ocultos pero funcionales para el filtrado mediante selectores CSS -->
+            <input type="radio" name="categoria" id="cat-todos" checked>
+            <input type="radio" name="categoria" id="cat-tejidos">
+            <input type="radio" name="categoria" id="cat-ceramicas">
+            <input type="radio" name="categoria" id="cat-pinturas">
+
+            <!-- Etiquetas de los radio buttons estilizadas como pestañas o botones de filtro -->
+            <div class="filter-buttons">
+                <label for="cat-todos" class="btn-filter">Todos</label>
+                <label for="cat-tejidos" class="btn-filter">Tejidos</label>
+                <label for="cat-ceramicas" class="btn-filter">Cerámicas</label>
+                <label for="cat-pinturas" class="btn-filter">Pinturas</label>
+            </div>
+
+            <!-- Contenedor general de tarjetas -->
+            <div class="cards-grid">
+
+                <!-- ================= CATEGORÍA: TEJIDOS ================= -->
+                <!-- Artículo 1 -->
+                <article class="card" data-category="tejidos">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/tejidos/articulo1.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/tejidos/articulo1.png" alt="Poncho artesanal de lana de oveja">
+                    </div>
+                    <div class="card-body">
+                        <h3>Poncho Andino de Lana</h3>
+                        <p>Tejido en telar tradicional con lana 100% de oveja, tintes naturales.</p>
+                        <!-- Enlace al PDF: artículos/tejidos/articulo1.pdf -->
+                        <a href="articulos/tejidos/articulo1.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="card" data-category="tejidos">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/tejidos/articulo2.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/tejidos/articulo2.png" alt="Camino de mesa rústico">
+                    </div>
+                    <div class="card-body">
+                        <h3>Camino de Mesa Rústico</h3>
+                        <p>Diseño geométrico inspirado en iconografía ancestral norteña.</p>
+                        <!-- Enlace al PDF: artículos/tejidos/articulo2.pdf -->
+                        <a href="articulos/tejidos/articulo2.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="card" data-category="tejidos">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/tejidos/articulo3.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/tejidos/articulo3.png" alt="Bufanda de alpaca tejida a mano">
+                    </div>
+                    <div class="card-body">
+                        <h3>Bufanda de Alpaca</h3>
+                        <p>Textura suave y abrigada, elaborada con fibra fina de alpaca.</p>
+                        <!-- Enlace al PDF: artículos/tejidos/articulo3.pdf -->
+                        <a href="articulos/tejidos/articulo3.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- ================= CATEGORÍA: CERÁMICAS ================= -->
+                <!-- Artículo 1 -->
+                <article class="card" data-category="ceramicas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/cerámicas/articulo1.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/ceramicas/articulo1.png" alt="Vasija de cerámica modelada a mano">
+                    </div>
+                    <div class="card-body">
+                        <h3>Vasija de Barro Ceremonial</h3>
+                        <p>Modelada a mano y horneada a leña, acabado con engobes naturales.</p>
+                        <!-- Enlace al PDF: artículos/cerámicas/articulo1.pdf -->
+                        <a href="articulos/ceramicas/articulo1.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="card" data-category="ceramicas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/cerámicas/articulo2.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/ceramicas/articulo2.png" alt="Taza artesanal esmaltada">
+                    </div>
+                    <div class="card-body">
+                        <h3>Taza Texturada Esmaltada</h3>
+                        <p>Pieza de cerámica utilitaria apta para microondas y vajilla diaria.</p>
+                        <!-- Enlace al PDF: artículos/cerámicas/articulo2.pdf -->
+                        <a href="articulos/ceramicas/articulo2.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="card" data-category="ceramicas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/cerámicas/articulo3.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/ceramicas/articulo3.png" alt="Plato decorativo de cerámica">
+                    </div>
+                    <div class="card-body">
+                        <h3>Plato Decorativo Estampado</h3>
+                        <p>Decorado con técnicas de esgrafiado y texturas botánicas.</p>
+                        <!-- Enlace al PDF: artículos/cerámicas/articulo3.pdf -->
+                        <a href="articulos/ceramicas/articulo3.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- ================= CATEGORÍA: PINTURAS ================= -->
+                <!-- Artículo 1 -->
+                <article class="card" data-category="pinturas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/pinturas/articulo1.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/pinturas/articulo1.png" alt="Óleo sobre lienzo paisaje rural">
+                    </div>
+                    <div class="card-body">
+                        <h3>Paisaje del Interior (Óleo)</h3>
+                        <p>Obra sobre lienzo que retrata los campos y horizontes del interior.</p>
+                        <!-- Enlace al PDF: artículos/pinturas/articulo1.pdf -->
+                        <a href="articulos/pinturas/articulo1.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="card" data-category="pinturas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/pinturas/articulo2.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/pinturas/articulo2.png" alt="Acuarela botánica">
+                    </div>
+                    <div class="card-body">
+                        <h3>Acuarela Botánica Nativa</h3>
+                        <p>Ilustración en acuarela sobre papel de algodón de flora autóctona.</p>
+                        <!-- Enlace al PDF: artículos/pinturas/articulo2.pdf -->
+                        <a href="articulos/pinturas/articulo2.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="card" data-category="pinturas">
+                    <div class="card-img-container">
+                        <!-- Imagen: artículos/pinturas/articulo3.png -->
+                        <!-- COMENTARIO: Reemplazar el src con la ruta real de la imagen -->
+                        <img src="articulos/pinturas/articulo3.png" alt="Acrílico abstracto texturado">
+                    </div>
+                    <div class="card-body">
+                        <h3>Acrílico Texturado Tierra</h3>
+                        <p>Composición abstracta utilizando pigmentos minerales y arcilla local.</p>
+                        <!-- Enlace al PDF: artículos/pinturas/articulo3.pdf -->
+                        <a href="articulos/pinturas/articulo3.pdf" target="_blank" class="btn-info">Ver PDF</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <p class="section-subtitle">¿Tienes alguna consulta sobre nuestros productos? Envíanos un mensaje.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de página con información de mantenimiento -->
+    <footer id="mantenimiento" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Artesanías & Tradición. Todos los derechos reservados.</p>
+            <p class="maintainer">Sitio mantenido por: <strong>Juan Patricio Bof</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
